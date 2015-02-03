@@ -4,6 +4,7 @@ class CreateBillings < ActiveRecord::Migration
       t.references :reservation
       t.references :purchase
       t.decimal :total_amount
+      t.integer :status
 
       t.timestamps
     end

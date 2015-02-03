@@ -9,5 +9,5 @@
     <%= p.text_field :cardname  %>
     <%= p.hidden_field :pay_date, :value => Date.today %>
     <%= p.hidden_field :billing_id, :value => @bill.id %>
-    <%= p.submit %>
+    <%= p.button  :submit , name: "id",value: @bill.id%>
 <% end %>

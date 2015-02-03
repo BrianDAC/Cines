@@ -13,7 +13,7 @@ class BillingsController < ApplicationController
       @desc_mayores = (@mayores * @price) / 2
       @sub_total = @entradas * @price
       @total =  ((@entradas - @mayores) * @price) + @desc_mayores
-      @billing=Billing.new :reservation_id => @compra_reservacion.id, :total_amount => @total
+      @billing=Billing.new :reservation_id => @compra_reservacion.id, :total_amount => @total, :status => 0
       @billing.save
     else
       @compra_reservacion = Purchase.find(params[:id])
@@ -28,13 +28,13 @@ class BillingsController < ApplicationController
       if @monday
         @sub_total = (@entradas * @price) / 2
         @total =  @sub_total
-        @billing=Billing.new :purchase_id => @compra_reservacion.id, :total_amount => @total
+        @billing=Billing.new :purchase_id => @compra_reservacion.id, :total_amount => @total, :status => 0
         @billing.save
       else
         @desc_mayores = (@mayores * @price) / 2
         @sub_total = @entradas * @price
         @total =  ((@entradas - @mayores) * @price) + @desc_mayores
-        @billing=Billing.new :purchase_id => @compra_reservacion.id, :total_amount => @total
+        @billing=Billing.new :purchase_id => @compra_reservacion.id, :total_amount => @total, :status => 0
         @billing.save
       end
     end

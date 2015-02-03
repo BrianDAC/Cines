@@ -8,8 +8,11 @@ class PaymentsController < ApplicationController
 
   def create
     @payment = Payment.new(permit_params)
+    @bill = Billing.find(params[:id])
     if @payment.save
-      redirect_to :root
+      @bill.status=1
+      @bill.save
+      redirect_to verification_path
     else
       render 'new'
     end

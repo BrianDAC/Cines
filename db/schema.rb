@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150202195223) do
     t.integer  "reservation_id"
     t.integer  "purchase_id"
     t.decimal  "total_amount"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
