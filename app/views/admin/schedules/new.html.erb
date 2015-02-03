@@ -1,0 +1,39 @@
+
+
+<br><h3>Agregue una nueva Hora</h3>
+
+<%= form_for @schedule, url: admin_schedules_path do |f| %>
+
+<p>
+	<%= label_tag( :hour, "Ingrese la Hora") %> <br>
+	<%= f.text_field :hour %>
+</p>
+
+<%= f.submit %>
+<% end %>
+
+
+<h3>Todas las Horas</h3><br>
+	
+
+
+<table class="table" border="1" cellspacing="0" >
+	<thead>
+		<tr>
+			<th>Horas</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<% @schedules.each do |schedule| %>
+			<tr>
+				<td width="30"><%= schedule.hour %></td>
+				<td ><%= link_to "Editar Hora", edit_admin_schedule_path(schedule) %></td>
+				<td ><%= link_to "Borrar", admin_schedule_path(schedule), method: :delete, data: { confirm: 'Está Seguro que desea Borrar?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<br>
+<%= link_to "Volver al Menu", admin_path %>

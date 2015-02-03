@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reservation_id: 1
+  name_billing: MyString
+  lastname_billing: MyString
+  ci_billing: MyString
+  payment_id: 1
+  payment: 1
+  cod_billing: MyString
+  date_billing: 2015-01-25
+
+two:
+  reservation_id: 1
+  name_billing: MyString
+  lastname_billing: MyString
+  ci_billing: MyString
+  payment_id: 1
+  payment: 1
+  cod_billing: MyString
+  date_billing: 2015-01-25

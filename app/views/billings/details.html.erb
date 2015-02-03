@@ -1,0 +1,32 @@
+<div>
+  <p>nombre
+  <%= @compra_reservacion.name %>
+  </p>
+  <p>apellido
+  <%= @compra_reservacion.lastname %>
+  </p>
+  <p>cedula
+  <%= @compra_reservacion.ci %>
+  </p>
+  <p>entradas
+    <%= @entradas %>
+  </p>
+  <p>mayores de edad
+    <%= @mayores %>
+  </p>
+  <p>sub-total
+    <%= @sub_total %>
+  </p>
+  <p>descuento por mayores de edad
+    <%= @desc_mayores %>
+  </p>
+  <p>total
+    <%= @total %>
+  </p>
+<% if @u == '1' %>
+    <%=  link_to "Siguiente", verification_path %>
+  <% else %>
+      <%=	 link_to "ulaasdasdada", {:controller => 'payments', :action => 'pay', :id => @billing.id} %>
+  <% end %>
+
+</div>

@@ -1,0 +1,43 @@
+<br><br>
+<h3>Todas las Funciones</h3>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Hora</th>
+			<th>Sala</th>
+			<th>Asientos</th>
+			<th>Pelicula</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @shows.each do |show| %>
+			<tr>
+				<td><%= show.schedule.hour %></td>
+				<td><%= show.room.number %></td>
+				<td><%= @seats.where(:show_id => show.id, :status => 0).count %></td>
+				<td><%= show.pelicula.tite %></td>
+				<td><%= link_to "Editar show", edit_employees_show_path(show) %></td>
+                <td><%= link_to "Destroy", employees_show_path(show), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>	
+
+<h3>Agregar Funcion</h3>
+<%=form_for @show, url: employees_shows_create_path do |s| %>
+<div class="field">
+    <%= s.label :schedule %>
+    <%= s.collection_select(:schedule_id, Schedule.all, :id, :hour, prompt: "Seleccione Hora") %>
+</div>
+<div class="field">
+    <%= s.label :room %>
+    <%= s.collection_select(:room_id, Room.all, :id, :number, prompt: "Seleccione Sala") %>
+</div>
+<div class="field">
+    <%= s.label :pelicula %>
+    <%= s.collection_select(:pelicula_id, Pelicula.all, :id, :tite, prompt: "Seleccione Película") %>
+</div>
+<%= s.submit %>
+<% end %>
+<br>
+<%= link_to "Volver al Menu", employees_path %>

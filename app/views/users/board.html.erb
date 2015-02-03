@@ -1,0 +1,39 @@
+<% @peliculas.each do |movie| %>
+<div class="info-container">
+	<div class="info-left">
+		<table class="table">
+			<thead>	<h4> <%= movie.tite %></h4></thead>
+			<tbody>
+
+				<tr>
+					<td><%=image_tag(movie.picture, size: "220x315") %></td>
+					<td><b> Genero:</b> <%= movie.category %><br>
+					<b>Duracion:</b> <%= movie.length %>min<br>
+
+					<b>Sinapsis:</b><br> <%= movie.description %><br></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="info-right">
+		<table class="table">
+		<thead>
+			<tr>
+				<th><b>Horario</b></th>
+				<th><b>Sala</b></th>
+				<th><b>Asientos Disponibles</b></th>
+			</tr>
+		</thead>
+		<% for s in @shows.where(pelicula_id: movie.id) %>
+		<tbody>
+			<tr>
+				<td><%= link_to s.schedule.hour,{controller: "services", action: "index", :show => s.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %></td>
+				<td><%= s.room.number %></td>
+				<td><%= s.room.seats %></td>
+			</tr>
+		</tbody>
+		<% end %>
+		</table>
+	</div>
+</div>
+<% end %>

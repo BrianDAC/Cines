@@ -1,0 +1,52 @@
+<div id="myCarousel" class="carousel slide">
+  		<!-- Indicadores -->
+		<ol class="carousel-indicators">
+			<li data-target= "#myCarousel" data-slide-to= "0" class="active"></li>
+			<li data-target= "#myCarousel" data-slide-to= "1"></li>
+			<li data-target= "#myCarousel" data-slide-to= "2"></li>
+		</ol>
+
+		<!-- Lo que va Adentro del slide -->
+		<div class="carousel-inner">
+		<!-- Imagenes de un mismo tamano -->
+		
+			<!-- Primer item activo -->
+			<div class="item active">
+				<!-- Cambiar "alt" para cada imagen -->		
+			<div class="item">
+				<div align="center"> <%=link_to( image_tag("hobbit-slide.jpg"), board_path) %></div>
+				<div class="carousel-caption">
+				</div>
+			</div>			
+			</div>
+
+			<div class="item">
+				<div align="center"> <%=link_to( image_tag("hierro-slide.jpg"), board_path) %></div>
+				<div class="carousel-caption">
+				</div>
+			</div>
+
+			<div class="item">
+				<div align="center"> <%=link_to( image_tag("exodo-slide.jpg"), board_path) %></div>
+				<div class="carousel-caption">
+				</div>
+			</div>
+
+		</div>
+		<!-- Paneles de control de slide -->
+		<a class="carousel-control left" href="#myCarousel" data-slide= "prev">
+			<span class="icon-prev"></span>
+		</a>
+		
+		<a class="carousel-control right" href="#myCarousel" data-slide= "next">
+			<span class="icon-next"></span>
+		</a>
+  	</div>
+<div style="margin-bottom:5px"><%=link_to( image_tag("hobbit.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("exodo.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("el_francotirador.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("interstellar.jpg", size: "243x315"), board_path) %></div>
+<div style="margin-bottom:65px"><%=link_to( image_tag("hobbit.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("exodo.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("el_francotirador.jpg", size: "243x315"), board_path) %>
+<%=link_to( image_tag("interstellar.jpg", size: "243x315"), board_path) %></div>

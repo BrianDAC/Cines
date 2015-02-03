@@ -1,0 +1,8 @@
+<div class="menu-services">
+  <div style="padding-top: 20px" align="center">
+   <%= link_to "Reservar en linea", {:controller => 'services/reservations', :action => 'new', :show => @show.id},{:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
+   <%= link_to "Comprar en linea", {:controller => 'services/purchases', :action => 'new', :show => @show.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
+  </div>
+</div>
+
+	

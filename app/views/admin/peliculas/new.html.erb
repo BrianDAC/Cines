@@ -1,0 +1,52 @@
+<h3>Todas las peliculas</h3><br>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Titulo</th>
+			<th>Categoria</th>
+			<th>Duracion</th>
+			<th>Descripcion</th>
+			<th>URL-Imagen</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @peliculas.each do |pelicula| %>
+			<tr>
+				<td><%= pelicula.tite %></td>
+				<td><%= pelicula.category %></td>
+				<td><%= pelicula.length %></td>
+				<td><%= pelicula.description %></td>
+				<td align="center"><%= image_tag(pelicula.picture, size: "100x130") %></td>
+				<td><%= link_to "Editar pelicula", edit_admin_pelicula_path(pelicula) %></td>
+				<td><%= link_to "Destroy", admin_pelicula_path(pelicula), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>		
+<br><h3>Agregue una Pelicula</h3>
+<%=form_for @pelicula, url: admin_peliculas_create_path do |p| %>
+<p>
+	<%= label_tag( :tite, "Titulo") %> <br>
+	<%= p.text_field :tite %>
+</p>
+<p>
+	<%= label_tag( :category, "Categoria")%><br>
+	<%= p.text_field :category %>
+</p>
+<p>
+	<%= label_tag(:length, "Duracion")%><br>
+	<%= p.text_field :length %>
+</p>
+<p>
+	<%= label_tag( :description, "Descripcion")%><br>
+	<%= p.text_field :description %>
+</p>
+<p>
+	<%= label_tag( :picture, "Url-Imagen")%><br>
+	<%= p.text_field :picture %>
+</p>
+<%= p.submit %>
+<% end %>
+<br>
+<%= link_to "Volver al Menu", admin_path %>
+

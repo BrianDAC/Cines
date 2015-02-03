@@ -1,0 +1,79 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap
+ */
+ body{
+ 	background-image: url("back.jpg");
+ }
+.footer {
+position: fixed;
+bottom: 0;
+width: 990px;
+height: 60px;
+background-color: #286090;
+border-top: 2px solid #c9c9c9;
+}
+
+.contenedor {
+width: 990px;
+margin: auto;
+border-left: 1px solid #c9c9c9;
+border-right: 1px solid #c9c9c9;
+overflow: hidden;
+}
+
+.contenedor .text-muted {
+margin: 10px 0;
+text-align: right;
+color: white;
+font-weight: bold;
+}
+
+.info-container {
+width: 988px; 
+height: 400px;
+background-color: snow
+}
+.info-left{
+	width: 480px; 
+	float:left
+}
+.info-right{
+	width:500px;
+	float:right;
+	padding-top:4px;
+}
+.navbar-default {
+border-color: #e7e7e7;
+background-color: #286090;
+margin-bottom: 0px;
+font-weight: bold;
+}
+
+.wrapeador {
+    height: 740px;
+    background-color: snow;
+}
+
+.menu-services{
+    min-height: 500px;
+    background-color: snow;
+}
+.casilla-form {
+    margin-right: 10px
+}
+.wrap-form {
+    display: inline-flex;
+}

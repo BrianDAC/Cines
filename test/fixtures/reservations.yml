@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lastname: MyString
+  email: MyString
+  seating: 1
+  elderly: 1
+  date_reservation: 2015-01-25
+  cod_reservation: MyString
+  pelicula_id: 1
+  room_id: 1
+  schedule_id: 1
+
+two:
+  name: MyString
+  lastname: MyString
+  email: MyString
+  seating: 1
+  elderly: 1
+  date_reservation: 2015-01-25
+  cod_reservation: MyString
+  pelicula_id: 1
+  room_id: 1
+  schedule_id: 1

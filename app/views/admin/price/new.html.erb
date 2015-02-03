@@ -1,0 +1,18 @@
+<h3>Precio</h3>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Precio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @prices.each do |prices| %>
+			<tr>
+				<td><%= prices.price %> Bsf</td>
+				<td><%= link_to "Editar Precio", edit_admin_price_path(prices) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>		
+<br>
+<%= link_to "Volver al Menu", admin_path %>

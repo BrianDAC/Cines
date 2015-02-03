@@ -1,0 +1,33 @@
+<%= form_for @reservation, url: services_reservations_create_path do |f| %>
+
+<div class="field">
+	<%= f.label :Nombre  %><br>
+	<%= f.text_field :name %>
+</div>
+<div class="field">
+	<%= f.label :Apellido%><br>
+	<%= f.text_field :lastname %>
+</div>
+<div class="field">
+	<%= f.label :Email %><br>
+	<%= f.text_field :email %>
+</div>
+<div class="field">
+	<%= f.label :Cedula %><br>
+	<%= f.text_field :ci %>
+</div>
+
+<div class="field">
+	<%= f.label :Número_De_Asientos %><br>
+	<%= f.number_field :seat %>
+</div>
+
+<div class="field">
+	<%= f.label :Mayores_de_65_años%><br>
+	<%= f.number_field :elderly %>
+</div>
+<%= f.submit %><br>
+<% end %>
+<br>
+<%= link_to "Atras", :back %>
+<%= link_to "Volver al Menu", services_path %>

@@ -1,0 +1,6 @@
+<h3>Edita el Precio</h3>
+
+<%=form_for @price, url: admin_price_path do |p| %>
+	<%= p.text_field :price %>
+	<%= p.submit %>	
+<% end %>

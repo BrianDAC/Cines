@@ -1,0 +1,26 @@
+<h3>Agregue una Pelicula</h3>
+<%=form_for @pelicula do |p| %>
+<p>
+	<%= label_tag( :tite, "Titulo") %> <br>
+	<%= p.text_field :tite %>
+</p>
+<p>
+	<%= label_tag( :category, "Categoria")%><br>
+	<%= p.text_field :category %>
+</p>
+<p>
+	<%= label_tag(:length, "Duracion")%><br>
+	<%= p.text_field :length %>
+</p>
+<p>
+	<%= label_tag( :description, "Descripcion")%><br>
+	<%= p.text_field :description %>
+</p>
+<p>
+	<%= label_tag( :picture, "Url-Imagen")%><br>
+	<%= p.text_field :picture %>
+</p>
+<%= p.submit %>
+<% end %>
+<br>
+<%= link_to "Volver al Menu", :root%>

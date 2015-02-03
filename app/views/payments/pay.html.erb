@@ -1,0 +1,13 @@
+<%= form_for @payment, url: payments_create_path do |p| %>
+    <%= p.label "Introdusca Numero de Tarjeta"  %>
+    <%= p.number_field :cardnumber  %>
+    <%= p.label "Fecha de expericaion"  %>
+    <%= p.date_field :due_date  %>
+    <%= p.label "Tipo de Tarjeta" %>
+    <%=	 p.select(:cardtype, @tarjetas) %>
+    <%= p.label "Nombre de Tarjetahabiente"  %>
+    <%= p.text_field :cardname  %>
+    <%= p.hidden_field :pay_date, :value => Date.today %>
+    <%= p.hidden_field :billing_id, :value => @bill.id %>
+    <%= p.submit %>
+<% end %>

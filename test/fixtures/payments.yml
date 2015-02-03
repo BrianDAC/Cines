@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numbercard: MyString
+  typecard: MyString
+  date_pay: 2015-02-02
+  date_due: 2015-02-02
+  namecard: MyString
+  billing_id: 1
+  references: 
+
+two:
+  numbercard: MyString
+  typecard: MyString
+  date_pay: 2015-02-02
+  date_due: 2015-02-02
+  namecard: MyString
+  billing_id: 1
+  references: 
