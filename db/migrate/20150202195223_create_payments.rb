@@ -6,6 +6,7 @@ class CreatePayments < ActiveRecord::Migration
       t.date :pay_date
       t.date :due_date
       t.string :cardname
+      
       t.references :billing, index: true
 
       t.timestamps
