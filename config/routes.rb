@@ -7,9 +7,12 @@ get "/employees" => "employees#index"
 get "/services" => "services#index"
 get "/board" => "users#board"
 get "employees/reservations" => "employees#reservation"
+get "employees/reservations/check" => "employees#check"
 get "/verification" => "services#verification"
 get "/details" => "billings#details"
   get "/pay" => "payments#pay"
+  get "/cash" => "payments#cash"
+
   post '/admin/peliculas/create'
   post '/admin/price/create'
   post 'employees/shows/create'

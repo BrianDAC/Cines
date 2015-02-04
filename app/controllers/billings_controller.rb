@@ -51,7 +51,6 @@ class BillingsController < ApplicationController
   end
 
 
-
   private
 
   def permit_params

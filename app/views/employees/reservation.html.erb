@@ -1,27 +1,36 @@
-<br><br>
-<h3>Todas las Reservaciones</h3>
+<h3>Reservaciones</h3><br>
 <table class="table">
-	<thead>
-		<tr>
-			<th>C.I.</th>
-			<th>Asientos</th>
-			<th>Hora</th>
-			<th>Pelicula</th>
-			<th>Sala</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @reservations.each do |r| %>
-			<tr>
-				<td><%= r.ci %></td>
-				<td><%= r.seat %></td>
-				<td><%= r.schedule.hour %></td>
-				<td><%= r.pelicula.tite %></td>
-				<td><%= r.room.number %></td>
-				<td><%= link_to "Editar show", edit_employees_show_path(show) %></td>
-				<td><%= link_to "Destroy", employees_show_path(show), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>	
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Cedula</th>
+    <th>Asientos</th>
+    <th>Mayores de edad</th>
+    <th>Pelicula</th>
+    <th>Sala</th>
+    <th>Hora</th>
+    <th>Total</th>
+    <th>Pago</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @billings.each do |b| %>
+      <tr>
+        <td><%=	 b.reservation.name %></td>
+        <td><%=	 b.reservation.lastname %></td>
+        <td><%=	 b.reservation.ci %></td>
+        <td><%=	 b.reservation.seat %></td>
+        <td><%=	 b.reservation.elderly %></td>
+        <td><%=	 b.reservation.show.pelicula.tite %></td>
+        <td><%=	 b.reservation.show.room.number %></td>
+        <td><%=	 b.reservation.show.schedule.hour %></td>
+        <td><%=	 b.total_amount  %></td>
+        <td> <%=   link_to "Efectivo", {:controller => 'payments', :action => 'cash', :id => b.id}  %> ||
+          <%=   link_to "Tarjeta de Credito", {:controller => 'payments', :action => 'pay', :id => b.id}   %> </td>
+      </tr>
+  <% end  %>
+      </tbody>
+</table>
+<%= link_to "Regresar", :back %>
 

@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20150203173414) do
     t.integer  "schedule_id"
     t.integer  "pelicula_id"
     t.integer  "room_id"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

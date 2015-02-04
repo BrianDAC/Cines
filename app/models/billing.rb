@@ -1,4 +1,5 @@
 class Billing < ActiveRecord::Base
-	belongs_to :reservation, inverse_of: :billings
-	belongs_to :purchase, inverse_of: :billings
+	belongs_to :reservation
+	belongs_to :purchase
+	has_one :show, :through => :reservation
 end

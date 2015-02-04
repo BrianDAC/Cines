@@ -29,7 +29,7 @@
 			<tr>
 				<td><%= link_to s.schedule.hour,{controller: "services", action: "index", :show => s.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %></td>
 				<td><%= s.room.number %></td>
-				<td><%= s.room.seats %></td>
+				<td><%= Showseat.where(:show_id => s.id).where(:status => 0).count %></td>
 			</tr>
 		</tbody>
 		<% end %>

@@ -14,20 +14,22 @@ def new
 		if @purchase.save
 			@id=''
 			@aux=0
-			(0...@purchase.seat.length).each do |i|
-				@aux = @aux + 1
-					if @aux == 2
-						@id = @id + @purchase.seat[i]
+			(0..@purchase.seat.length).each do |i|
+					if @purchase.seat[i] == ',' || @aux == 3 || i == @purchase.seat.length
 						@name_seat=Seat.where(:seat => @id).first
 						@change_stat=Showseat.where(:show_id => @purchase.show_id).where(:seat_id => @name_seat.id).first
 						@change_stat.status = 1
 						@change_stat.purchase_id=@purchase.id
 						@change_stat.save
 						@id = ''
-					elsif @aux == 3
 						@aux = 0
 					else
-						@id = @id + @purchase.seat[i]
+						if @purchase.seat[i].nil?
+
+						else
+							@aux = @aux + 1
+							@id = @id + @purchase.seat[i]
+						end
 					end
 				end
 

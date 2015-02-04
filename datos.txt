@@ -2,7 +2,7 @@
 
 @u.number=1
 
-@u.seat=100
+@u.seats=100
 
 @u.save
 
@@ -10,7 +10,7 @@
 
 @u.number=2
 
-@u.seat=100
+@u.seats=100
 
 @u.save
 
@@ -18,7 +18,7 @@
 
 @u.number=3
 
-@u.seat=100
+@u.seats=100
 
 @u.save
 
@@ -26,11 +26,7 @@
 
 @u.number=4
 
-@u.save
-
-
-@u.seat=200
-
+@u.seats=200
 @u.save
 
 @u=Price.new
@@ -125,6 +121,66 @@
 @u=Seat.new
 
 @u.seat="A10"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B1"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B2"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B3"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B4"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B5"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B6"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B7"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B8"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B9"
+
+@u.save
+
+@u=Seat.new
+
+@u.seat="B10"
 
 @u.save
 

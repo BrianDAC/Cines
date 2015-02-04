@@ -15,8 +15,6 @@ class Services::ReservationsController < ApplicationController
 			@id=''
 			@aux = 0
 			(0..@reservation.seat.length).each do |i|
-				puts "++++#{i}+++++"
-				puts "++++++#{@id}+++++"
 					if @reservation.seat[i] == ',' || @aux == 3 || i == @reservation.seat.length
 						@name_seat=Seat.where(:seat => @id).first
 						@change_stat=Showseat.where(:show_id => @reservation.show_id).where(:seat_id => @name_seat.id).first
@@ -31,7 +29,6 @@ class Services::ReservationsController < ApplicationController
 						else
 							@aux = @aux + 1
 							@id = @id + @reservation.seat[i]
-							puts "++++++#{@id}+++++"
 						end
 					end
 				end
@@ -60,6 +57,7 @@ class Services::ReservationsController < ApplicationController
 			render 'edit'
 		end
 	end
+
 
 	private
 

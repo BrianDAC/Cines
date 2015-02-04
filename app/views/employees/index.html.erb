@@ -6,6 +6,13 @@
 <br>
 <h4><%= link_to "Realizar Ventas en Taquilla", new_employees_show_path %></h4>
 <br>
-<h4><%= link_to "Verificar y Pagar Reservaciones", new_employees_show_path %></h4>
+<h4>Pagar Reservaciones</h4>
+<%= form_tag '/employees/reservations', :method => "get" do %>
+    <%= label_tag 'Introduzca Cedula' %>
+    <%= number_field_tag 'ci' %>
+    <%= submit_tag "Buscar" %>
+<% end %>
 
-<br>	
+
+
+

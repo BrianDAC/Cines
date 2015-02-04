@@ -11,6 +11,8 @@ class Employees::ShowsController < ApplicationController
 	def create
 		@shows=Show.all
 		@show = Show.new(permit_params)
+		@seats=Showseat.all
+		@show.status = 0
 		if @show.save
 			if @show.room.number == 4
 				(1..200).each do |i|

@@ -6,6 +6,13 @@ class PaymentsController < ApplicationController
 
   end
 
+  def cash
+    @bill = Billing.find(params[:id])
+    @bill.status=1
+    @bill.save
+    redirect_to verification_path
+  end
+
   def create
     @payment = Payment.new(permit_params)
     @bill = Billing.find(params[:id])

@@ -23,14 +23,20 @@ $(document).ready(function() {
         }
     }
     aux = 0;
-    for (i = 0; i < asientoscomprados.length + 1; i++){
-        if(aux == 2){
-            aux=0;
-            $('#'+ponercomprados).addClass('unavailable');
-            ponercomprados=''
-        } else  {
-            ponercomprados += asientoscomprados[i];
-            aux++
+    for (i = 0; i < asientoscomprados.length + 2 ; i++){
+        if(i == asientoscomprados.length == false) {
+            if (asientoscomprados[i] == ' ' || aux == 3) {
+                aux = 0;
+                $('#' + ponercomprados).addClass('unavailable');
+                ponercomprados = '';
+            } else {
+                ponercomprados += asientoscomprados[i];
+                aux = aux + 1;
+            }
+        } else {
+            $('#' + ponercomprados).addClass('unavailable');
+            ponercomprados = '';
+            aux = aux + 1;
         }
     }
     (function(){
@@ -45,7 +51,7 @@ $(document).ready(function() {
             $('#sala4').hide();
             $('#fijar-asiento').show()
         }
-    }())
+    }());
     $('.seatCharts-seat').on('click', function() {
         id_seleccionado = $(this).attr("id");
         if ($(this).hasClass('selected')){
@@ -61,6 +67,7 @@ $(document).ready(function() {
         asientoselegidos = seatid.toString();
         $('#reservation_seat').val(asientoselegidos);
         $('#purchase_seat').val(asientoselegidos);
+        $('#asientos-parrafo').text(asientoselegidos);
 
     });
 

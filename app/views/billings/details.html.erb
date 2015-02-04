@@ -24,7 +24,7 @@
     <%= @total %>
   </p>
 <% if @u == '1' %>
-    <%=  link_to "Siguiente", verification_path %>
+    <%=  link_to "Siguiente", verification_path, :confirm => 'Are you sure?' %>
   <% else %>
       <%=	 link_to "ulaasdasdada", {:controller => 'payments', :action => 'pay', :id => @billing.id} %>
   <% end %>
