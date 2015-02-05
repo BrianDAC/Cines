@@ -14,4 +14,9 @@ class EmployeesController < ApplicationController
 		@billings = Billing.joins(:reservation).where('reservations.ci' => params[:ci]).where(:status => 0)
 	end
 
+
+	def ticket
+		redirect_to board_path
+	end
+
 end

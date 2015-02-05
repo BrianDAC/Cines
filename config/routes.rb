@@ -12,6 +12,7 @@ get "/verification" => "services#verification"
 get "/details" => "billings#details"
   get "/pay" => "payments#pay"
   get "/cash" => "payments#cash"
+  get "employees/ticket" => "employees#ticket"
 
   post '/admin/peliculas/create'
   post '/admin/price/create'
