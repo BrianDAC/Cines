@@ -7,42 +7,51 @@ $(document).ready(function() {
     var aux = 0;
     var asientoscomprados = $('#comprados').val();
     var ponercomprados =  '';
-    for (var i = 0; i < asiestosreservados.length + 1 ; i++){
-        if(i == asiestosreservados.length == false) {
-            if (asiestosreservados[i] == ' ' || aux == 3) {
-                aux = 0;
+    if (asiestosreservados == null) {
+
+    }else {
+        for (var i = 0; i < asiestosreservados.length + 1 ; i++){
+            if(i == asiestosreservados.length == false) {
+                if (asiestosreservados[i] == ' ' || aux == 3) {
+                    aux = 0;
+                    $('#' + ponerreservados).addClass('reservado');
+                    ponerreservados = '';
+                } else {
+                    ponerreservados += asiestosreservados[i];
+                    aux = aux + 1;
+                }
+            } else {
                 $('#' + ponerreservados).addClass('reservado');
                 ponerreservados = '';
-            } else {
-                ponerreservados += asiestosreservados[i];
-                aux = aux + 1;
             }
-        } else {
-            $('#' + ponerreservados).addClass('reservado');
-            ponerreservados = '';
         }
     }
     aux = 0;
-    for (i = 0; i < asientoscomprados.length + 2 ; i++){
-        if(i == asientoscomprados.length == false) {
-            if (asientoscomprados[i] == ' ' || aux == 3) {
-                aux = 0;
+    if (asientoscomprados == null) {
+
+    }else {
+        for (i = 0; i < asientoscomprados.length + 2; i++) {
+            if (i == asientoscomprados.length == false) {
+                if (asientoscomprados[i] == ' ' || aux == 3) {
+                    aux = 0;
+                    $('#' + ponercomprados).addClass('unavailable');
+                    ponercomprados = '';
+                } else {
+                    ponercomprados += asientoscomprados[i];
+                    aux = aux + 1;
+                }
+            } else {
                 $('#' + ponercomprados).addClass('unavailable');
                 ponercomprados = '';
-            } else {
-                ponercomprados += asientoscomprados[i];
                 aux = aux + 1;
             }
-        } else {
-            $('#' + ponercomprados).addClass('unavailable');
-            ponercomprados = '';
-            aux = aux + 1;
         }
     }
     (function(){
         var sala = $('#show_sala').val();
         var show = $('#show_id').val();
-        if (sala === 4){
+
+        if (sala == 4){
             $('#sala4').show();
             $('#sala123').hide();
             $('#fijar-asiento').show()

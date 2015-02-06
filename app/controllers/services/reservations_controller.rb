@@ -31,7 +31,14 @@ class Services::ReservationsController < ApplicationController
 							@id = @id + @reservation.seat[i]
 						end
 					end
-				end
+			end
+
+
+			if Showseat.where(:show_id => @reservation.show.id).where(:status => 0).count <= 0
+				@show = Show.where(:id => @reservation.show.id).first
+				@show.status = 1
+				@show.save
+			end
 
 			redirect_to :controller => '/billings', :action => 'details', :id => @reservation.id, :valor => '1'
 		else

@@ -1,26 +1,28 @@
 div.wrap#sala123 {
     width: 440px;
-    height: 210px;
+    min-height: 210px;
     margin-left: auto;
     margin-right: auto;
-    border-style: dashed;
-    border-width: 1px;
-    border-color: grey;
+
 }
 div.wrap#sala4 {
     width: 440px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    border-style: dashed;
-    border-width: 1px;
-    border-color: grey;
+
 }
 div.seatCharts-container {
-	min-width: 300px;
+	min-width: 800px;
     min-height: 200px;
-    background-color: white;
     alignment: center;
+
+    background-color: #000000;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    border-radius: 15px;
+
 }
 div.seatCharts-cell {
 
@@ -32,8 +34,9 @@ div.seatCharts-cell {
 	outline: none;
 	font-size: 13px;
 	line-height:16px;
-	color: #000000;
+	color: red;
     font-weight: bold;
+    padding-top: 5px;
 
 }
 div.seatCharts-seat {
@@ -54,7 +57,7 @@ div.seatCharts-seat:focus {
 */
 
 div.seatCharts-space {
-	background-color: white;
+	background-color: #000000;
 }
 div.seatCharts-row {
 	height: 35px;
@@ -90,9 +93,9 @@ li.seatCharts-legendItem {
 	line-height: 2;
 }
 .front-indicator {
-    width: 375px;
+    width: 740px;
     margin: 5px 32px 15px 32px;
-    background-color: #e1e1e1;
+    background-color: #ffffff;
     color: #adadad;
     text-align: center;
     padding: 3px;

@@ -1,314 +1,512 @@
 <%= stylesheet_link_tag 'jquery.seat-charts' %>
+<div class="container">
+  <div class="row" >
+    <div class="col-sm-12 moviebar">
+      <div class="again180">Reservar</div>
+    </div>
+  </div>
+  <div class="wrapeador">
+    <%= form_for @reservation, url: services_reservations_create_path do |r| %>
 
-<div class="wrapeador" align="center">
+        <div align="center"><h3>Asientos</h3></div>
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-8">
+            <div id="sala123"  style="display: none">
+              <div class="seatCharts-container">
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">E</div>
+                  <div id="E1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="E2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="E3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="E4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="E5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="E6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="E7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="E8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="E9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="E10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="E11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="E12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="E13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="E14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="E15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="E16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="E17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="E18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="E19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="E20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">D</div>
+                  <div id="D1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="D2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="D3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="D4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="D5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="D6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="D7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="D8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="D9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="D10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="D11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="D12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="D13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="D14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="D15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="D16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="D17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="D18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="D19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="D20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">C</div>
+                  <div id="C1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="C2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="C3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="C4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="C5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="C6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="C7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="C8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="C9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="C10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="C11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="C12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="C13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="C14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="C15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="C16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="C17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="C18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="C19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="C20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">B</div>
+                  <div id="B1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="B2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="B3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="B4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="B5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="B6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="B7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="B8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="B9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="B10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="B11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="B12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="B13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="B14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="B15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="B16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="B17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="B18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="B19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="B20" class="seatCharts-seat seatCharts-cell">20</div>
 
-<%= form_for @reservation, url: services_reservations_create_path do |r| %>
-      <%= hidden_field_tag "show_id", @show.id %>
-      <%= hidden_field_tag "show_sala", @show.room.number %>
-      <% Showseat.where(:show_id => @show.id).where(:status => 2).find_each do |ocu| %>
-          <% @ocupados.push(ocu.seat.seat) %>
-      <% end %>
-      <% Showseat.where(:show_id => @show.id).where(:status => 1).find_each do |ocu| %>
-          <% @comprados.push(ocu.seat.seat) %>
-      <% end %>
-      <%= hidden_field_tag "ocupados", @ocupados %>
-      <%= hidden_field_tag "comprados", @comprados %>
-    <div class="wrap-form">
-      <div class="casilla-form">
-          <p>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">A</div>
+                  <div id="A1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="A2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="A3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="A4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="A5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="A6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="A7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="A8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="A9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="A10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="A11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="A12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="A13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="A14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="A15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="A16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="A17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="A18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="A19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="A20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="front-indicator">Screen</div>
+              </div>
+            </div>
+
+            <div id="sala4" style="display: none">
+              <div class="seatCharts-container">
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">J</div>
+                  <div id="J1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="J2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="J3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="J4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="J5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="J6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="J7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="J8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="J9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="J10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="J11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="J12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="J13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="J14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="J15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="J16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="J17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="J18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="J19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="J20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">I</div>
+                  <div id="I1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="I2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="I3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="I4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="I5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="I6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="I7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="I8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="I9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="I10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="I11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="I12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="I13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="I14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="I15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="I16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="I17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="I18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="I19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="I20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">H</div>
+                  <div id="H1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="H2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="H3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="H4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="H5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="H6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="H7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="H8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="H9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="H10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="H11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="H12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="H13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="H14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="H15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="H16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="H17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="H18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="H19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="H20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">G</div>
+                  <div id="G1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="G2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="G3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="G4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="G5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="G6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="G7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="G8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="G9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="G10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="G11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="G12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="G13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="G14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="G15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="G16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="G17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="G18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="G19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="G20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">F</div>
+                  <div id="F1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="F2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="F3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="F4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="F5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="F6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="F7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="F8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="F9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="F10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="F11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="F12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="F13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="F14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="F15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="F16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="F17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="F18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="F19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="F20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">E</div>
+                  <div id="E1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="E2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="E3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="E4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="E5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="E6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="E7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="E8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="E9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="E10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="E11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="E12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="E13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="E14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="E15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="E16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="E17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="E18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="E19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="E20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">D</div>
+                  <div id="D1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="D2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="D3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="D4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="D5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="D6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="D7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="D8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="D9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="D10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="D11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="D12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="D13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="D14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="D15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="D16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="D17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="D18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="D19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="D20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">C</div>
+                  <div id="C1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="C2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="C3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="C4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="C5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="C6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="C7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="C8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="C9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="C10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="C11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="C12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="C13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="C14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="C15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="C16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="C17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="C18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="C19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="C20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">B</div>
+                  <div id="B1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="B2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="B3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="B4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="B5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="B6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="B7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="B8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="B9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="B10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="B11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="B12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="B13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="B14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="B15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="B16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="B17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="B18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="B19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="B20" class="seatCharts-seat seatCharts-cell">20</div>
+
+                </div>
+                <div class="seatCharts-row">
+                  <div class="seatCharts-cell seatCharts-space">A</div>
+                  <div id="A1" class="seatCharts-seat seatCharts-cell">1</div>
+                  <div id="A2" class="seatCharts-seat seatCharts-cell">2</div>
+                  <div id="A3" class="seatCharts-seat seatCharts-cell">3</div>
+                  <div id="A4" class="seatCharts-seat seatCharts-cell">4</div>
+                  <div id="A5" class="seatCharts-seat seatCharts-cell">5</div>
+                  <div id="A6" class="seatCharts-seat seatCharts-cell">6</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="A7" class="seatCharts-seat seatCharts-cell">7</div>
+                  <div id="A8" class="seatCharts-seat seatCharts-cell">8</div>
+                  <div id="A9" class="seatCharts-seat seatCharts-cell">9</div>
+                  <div id="A10" class="seatCharts-seat seatCharts-cell">10</div>
+                  <div id="A11" class="seatCharts-seat seatCharts-cell">11</div>
+                  <div id="A12" class="seatCharts-seat seatCharts-cell">12</div>
+                  <div id="A13" class="seatCharts-seat seatCharts-cell">13</div>
+                  <div id="A14" class="seatCharts-seat seatCharts-cell">14</div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div class="seatCharts-space seatCharts-cell"></div>
+                  <div id="A15" class="seatCharts-seat seatCharts-cell">15</div>
+                  <div id="A16" class="seatCharts-seat seatCharts-cell">16</div>
+                  <div id="A17" class="seatCharts-seat seatCharts-cell">17</div>
+                  <div id="A18" class="seatCharts-seat seatCharts-cell">18</div>
+                  <div id="A19" class="seatCharts-seat seatCharts-cell">19</div>
+                  <div id="A20" class="seatCharts-seat seatCharts-cell">20</div>
+                </div>
+                <div class="front-indicator">Screen</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding-top: 5px">
+          <div class="col-sm-offset-4 col-sm-5">
+            <div id="fijar-asiento" class="btn btn-danger btn-block" style="display: none; margin-left: -30px">Fijar Asientos</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-4 col-sm-5">
+            <h3 id="asientos-parrafo" style=" margin-left: 30px"></h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div></div>
+          <%= hidden_field_tag "show_id", @show.id %>
+          <%= hidden_field_tag "show_sala", @show.room.number %>
+          <% Showseat.where(:show_id => @show.id).where(:status => 2).find_each do |ocu| %>
+              <% @ocupados.push(ocu.seat.seat) %>
+          <% end %>
+          <% Showseat.where(:show_id => @show.id).where(:status => 1).find_each do |ocu| %>
+              <% @comprados.push(ocu.seat.seat) %>
+          <% end %>
+          <%= hidden_field_tag "ocupados", @ocupados %>
+          <%= hidden_field_tag "comprados", @comprados %>
+
+          <div class="col-sm-offset-1 col-sm-5">
+            <div class="form-group">
               <%= label_tag( :name, "Nombre") %> <br>
-              <%= r.text_field :name %>
-          </p>
-      </div>
-      <div class="casilla-form">
-          <p>
-            <%= label_tag( :lastname, "Apellido") %> <br>
-            <%= r.text_field :lastname %>
-          </p>
-      </div>
-    </div>
-      <div class="wrap-form">
-          <div class="casilla-form">
-            <p>
-              <%= label_tag( :email, "Email") %> <br>
-              <%= r.text_field :email %>
-            </p>
+              <%= r.text_field :name, :class => 'form-control', :placeholder => "Nombre" %>
+            </div>
+            <div class="form-group">
+              <%= label_tag( :lastname, "Apellido") %> <br>
+              <%= r.text_field :lastname, :class => 'form-control', :placeholder => "Apellido"  %>
+            </div>
           </div>
-        <div class="casilla-form">
-            <p>
+
+          <div class="col-sm-5">
+            <div class="form-group">
               <%= label_tag( :ci, "Cedula") %> <br>
-              <%= r.text_field :ci %>
-            </p>
-        </div>
-        <div class="casilla-form">
-          <p>
+              <%= r.text_field :ci, :class => 'form-control', :placeholder => "Cedula" %>
+            </div>
             <%= r.hidden_field :show_id, :value => @show.id %>
-          </p>
+            <div class="form-group">
+              <%= label_tag( :elderly, "Mayores de 65 años") %> <br>
+              <%= r.number_field :elderly, :class => 'form-control', :placeholder => "Mayores de edad"  %>
+            </div>
+          </div>
         </div>
-      </div>
-    <div style="display:block ">
-      <div class="wrap-form">
-        <div class="casilla-form">
-            <p>
-              <%= r.hidden_field(:seat )%>
-            </p>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-10">
+            <div class="form-group">
+              <%= label_tag( :email, "Email") %> <br>
+              <%= r.text_field :email, :class => 'form-control', :placeholder => "jane.doe@example.com" %>
+            </div>
+          </div>
         </div>
-      <div class="casilla-form">
-        <p>
-          <%= label_tag( :elderly, "Mayores de 65 años") %> <br>
-          <%= r.number_field :elderly %>
-        </p>
+        <%= r.hidden_field(:seat )%>
+
+
+        <div class="row">
+          <div class="col-sm-offset-4 col-sm-5" >
+            <%= r.submit "Reservar", :style => 'margin-left: -30px; margin-bottom: 15px',:class => 'btn btn-success btn-block' %>
+          </div>
+        </div>
+    <% end %>
+
+
+    <div class="row" style="border-top: dashed; padding-top: 5px">
+      <div class="col-sm-offset-2 col-sm-10">
+        <ol class="instrucciones">
+          <li class="each-instruccion">Introduzca sus datos en el formulario</li>
+          <li class="each-instruccion">Seleccione sus asientos</li>
+          <li class="each-instruccion">Haga click en "Fijar Asientos" (debe ver sus asientos elegidos)</li>
+          <li class="each-instruccion">Haga click en "Reservar"</li>
+        </ol>
       </div>
     </div>
 
-      <div id="sala123" class="wrap" style="display: none">
-        <div class="seatCharts-container">
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">E</div>
-            <div id="E1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="E2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="E3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="E4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="E5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="E6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="E7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="E8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="E9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="E10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">D</div>
-            <div id="D1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="D2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="D3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="D4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="D5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="D6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="D7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="D8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="D9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="D10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">C</div>
-            <div id="C1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="C2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="C3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="C4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="C5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="C6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="C7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="C8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="C9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="C10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">B</div>
-            <div id="B1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="B2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="B3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="B4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="B5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="B6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="B7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="B8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="B9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="B10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">A</div>
-            <div id="A1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="A2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="A3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="A4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="A5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="A6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="A7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="A8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="A9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="A10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="front-indicator">Screen</div>
-        </div>
-      </div>
-
-      <div id="sala4" class="wrap" style="display: none">
-        <div class="seatCharts-container">
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">J</div>
-            <div id="J1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="J2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="J3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="J4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="J5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="J6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="J7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="J8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="J9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="J10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">I</div>
-            <div id="I1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="I2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="I3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="I4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="I5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="I6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="I7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="I8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="I9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="I10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">H</div>
-            <div id="H1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="H2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="H3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="H4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="H5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="H6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="H7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="H8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="H9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="H10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">G</div>
-            <div id="G1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="G2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="G3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="G4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="G5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="G6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="G7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="G8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="G9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="G10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">F</div>
-            <div id="F1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="F2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="F3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="F4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="F5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="F6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="F7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="F8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="F9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="F10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">E</div>
-            <div id="E1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="E2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="E3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="E4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="E5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="E6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="E7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="E8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="E9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="E10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">D</div>
-            <div id="D1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="D2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="D3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="D4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="D5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="D6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="D7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="D8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="D9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="D10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">C</div>
-            <div id="C1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="C2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="C3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="C4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="C5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="C6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="C7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="C8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="C9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="C10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">B</div>
-            <div id="B1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="B2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="B3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="B4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="B5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="B6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="B7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="B8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="B9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="B10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="seatCharts-row">
-            <div class="seatCharts-cell seatCharts-space">A</div>
-            <div id="A1" class="seatCharts-seat seatCharts-cell">1</div>
-            <div id="A2" class="seatCharts-seat seatCharts-cell">2</div>
-            <div id="A3" class="seatCharts-seat seatCharts-cell">3</div>
-            <div id="A4" class="seatCharts-seat seatCharts-cell">4</div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div class="seatCharts-space seatCharts-cell"></div>
-            <div id="A5" class="seatCharts-seat seatCharts-cell">5</div>
-            <div id="A6" class="seatCharts-seat seatCharts-cell">6</div>
-            <div id="A7" class="seatCharts-seat seatCharts-cell">7</div>
-            <div id="A8" class="seatCharts-seat seatCharts-cell">8</div>
-            <div id="A9" class="seatCharts-seat seatCharts-cell">9</div>
-            <div id="A10" class="seatCharts-seat seatCharts-cell">10</div>
-          </div>
-          <div class="front-indicator">Screen</div>
-        </div>
-      </div>
-
-      <div id="fijar-asiento" class="btn btn-danger" style="margin-top: 5px; margin-bottom: 5px; display: none;">Fijar Asientos</div>
-
-      <p id="asientos-parrafo"></p>
-
-      <p>
-      <%= r.submit "Reservar", :class => 'btn btn-success' %>
-      </p>
-<% end %>
+  </div>
 </div>
-
-
-
-
-

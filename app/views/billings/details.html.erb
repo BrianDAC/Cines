@@ -1,32 +1,33 @@
-<div>
-  <p>nombre
-  <%= @compra_reservacion.name %>
-  </p>
-  <p>apellido
-  <%= @compra_reservacion.lastname %>
-  </p>
-  <p>cedula
-  <%= @compra_reservacion.ci %>
-  </p>
-  <p>entradas
-    <%= @entradas %>
-  </p>
-  <p>mayores de edad
-    <%= @mayores %>
-  </p>
-  <p>sub-total
-    <%= @sub_total %>
-  </p>
-  <p>descuento por mayores de edad
-    <%= @desc_mayores %>
-  </p>
-  <p>total
-    <%= @total %>
-  </p>
-<% if @u == '1' %>
-    <%=  link_to "Siguiente", verification_path, :confirm => 'Are you sure?' %>
-  <% else %>
-      <%=	 link_to "ulaasdasdada", {:controller => 'payments', :action => 'pay', :id => @billing.id} %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 moviebar">
+     <div class="again180"> Detalles de Facturacion </div>
+    </div>
+  </div>
+  <div class="wrapeador">
 
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-5">
+        <div><h3>Nombre: <h4 class="bg-info"><%= @compra_reservacion.name %></h4></h3></div>
+        <div><h3>Apellido: <h4 class="bg-info"><%= @compra_reservacion.lastname %></h4></h3></div>
+        <div><h3>Cedula: <h4 class="bg-info"><%= @compra_reservacion.ci %></h4></h3></div>
+        <div><h3>Entradas: <h4 class="bg-info"><%= @entradas %></h4></h3></div>
+      </div>
+      <div class="col-sm-5">
+        <div><h3>Mayores dede Edad: <h4 class="bg-info"><%= @mayores %></h4></h3></div>
+        <div><h3>Descuento por mayores: <h4 class="bg-info"><%= @desc_mayores %></h4></h3></div>
+        <div><h3>Sub-Total: <h4 class="bg-info"><%= @sub_total %></h4></h3></div>
+        <div><h3>Total: <h4 class="bg-info"><%= @total  %></h4></h3></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-6 col-s-6">
+          <% if @u == '1' %>
+              <%=  link_to "Siguiente", verification_path, :style => 'margin-bottom: 10px',:class => 'btn btn-success'%>
+          <% else %>
+              <%=	 link_to "Procesar", {:controller => 'payments', :action => 'pay', :id => @billing.id}, :style => 'margin-bottom: 10px',:class => 'btn btn-success' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

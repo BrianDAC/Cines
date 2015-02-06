@@ -1,22 +1,36 @@
+<div class="container">
+  <div class="col-sm-12 moviebar" style="margin-bottom: 0">
+    <div class="again180">Cartelera</div>
+  </div>
 <% @peliculas.each do |movie| %>
 <div class="info-container">
-	<div class="info-left">
+  <div class="row margen-arriba" >
+	<div class="col-sm-5">
+      <div class="table-responsive sizepicture">
 		<table class="table">
-			<thead>	<h4> <%= movie.tite %></h4></thead>
-			<tbody>
+          <div class="row">
+            <div class="col-sm- 7">
+			    <thead>	<h4 style="padding-left: 10px"> <%= movie.tite %></h4></thead>
+			    <tbody>
 
 				<tr>
-					<td><%=image_tag(movie.picture, size: "220x315") %></td>
+					<td><%=image_tag(movie.picture, :size => '200x270') %></td>
+            </div>
+            <div class="col-sm-5">
 					<td><b> Genero:</b> <%= movie.category %><br>
 					<b>Duracion:</b> <%= movie.length %>min<br>
 
 					<b>Sinapsis:</b><br> <%= movie.description %><br></td>
 				</tr>
 			</tbody>
+            </div>
+          </div>
 		</table>
+      </div>
 	</div>
-	<div class="info-right">
-		<table class="table">
+	<div class="col-sm-7">
+      <div class="table-responsive">
+		<table class="table table-hover">
 		<thead>
 			<tr>
 				<th><b>Horario</b></th>
@@ -27,13 +41,21 @@
 		<% for s in @shows.where(pelicula_id: movie.id) %>
 		<tbody>
 			<tr>
-				<td><%= link_to s.schedule.hour,{controller: "services", action: "index", :show => s.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %></td>
-				<td><%= s.room.number %></td>
+              <% if	 s.status == 1 %>
+                  <td><%= link_to s.schedule.hour,{controller: "services", action: "index", :show => s.id}, {:style=>'color:#FFFFFF; disabled: disabled', :class => "btn btn-danger"} %></td>
+            <% else  %>
+                  <td><%= link_to s.schedule.hour,{controller: "services", action: "index", :show => s.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %></td>
+              <% end  %>
+
+              <td><%= s.room.number %></td>
 				<td><%= Showseat.where(:show_id => s.id).where(:status => 0).count %></td>
 			</tr>
 		</tbody>
 		<% end %>
 		</table>
+      </div>
 	</div>
+  </div>
 </div>
 <% end %>
+</div>

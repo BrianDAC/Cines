@@ -1,17 +1,49 @@
-<%= form_for @payment, url: payments_create_path do |p| %>
-    <%= p.label "Introduzca Numero de Tarjeta"  %>
-    <%= p.number_field :cardnumber  %><p>
-    <%= p.label "Fecha de Expiración"  %>
-    <%= p.date_field :due_date  %><p>
-    <%= p.label "Tipo de Tarjeta" %>
-    <%=	 p.select(:cardtype, @tarjetas) %><p>
-    <%= p.label "Nombre de Tarjetahabiende"  %>
-    <%= p.text_field :cardname  %><p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 moviebar">
+      <div class="again180">Datos de Tarjeta</div>
+    </div>
+  </div>
+  <div class="wrapeador">
+    <div class="row">
+      <div class="col-sm-offset-1 col-sm-5">
+        <%= form_for @payment, url: payments_create_path do |p| %>
 
-    <%= p.label "Código de Seguridad"  %>
-    <%= p.text_field :codesecurity  %><p>
+            <div class="form-group">
+                <div><%= p.label "Introduzca Numero de Tarjeta" %></div>
+                <%= p.number_field :cardnumber, :class => 'form-control' %>
+            </div>
 
-    <%= p.hidden_field :pay_date, :value => Date.today %>
-    <%= p.hidden_field :billing_id, :value => @bill.id %>
-    <%= p.button  :submit , name: "id",value: @bill.id%>
-<% end %>
+            <div class="form-group">
+                <div><%= p.label "Fecha de Expiración"  %></div>
+                <%= p.date_field :due_date, :class => 'form-control'  %>
+            </div>
+
+            <div class="form-group">
+                <div><%= p.label "Tipo de Tarjeta" %></div>
+                <%=	 p.select(:cardtype, @tarjetas) %>
+            </div>
+
+      </div>
+
+      <div class="col-sm-5">
+
+        <div class="form-group">
+            <div><%= p.label "Nombre de Tarjetahabiende"  %></div>
+                <%= p.text_field :cardname, :class => 'form-control'  %><p>
+        </div>
+
+        <div class="form-group">
+          <div><%= p.label "Código de Seguridad"  %></div>
+            <%= p.text_field :codesecurity, :class => 'form-control'  %><p>
+        </div>
+
+            <%= p.hidden_field :pay_date, :value => Date.today %>
+            <%= p.hidden_field :billing_id, :value => @bill.id %>
+
+            <%= p.button  :submit , name: "id",value: @bill.id, :class => 'btn btn-success'%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

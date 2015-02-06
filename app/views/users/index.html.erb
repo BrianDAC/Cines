@@ -14,20 +14,20 @@
 			<div class="item active">
 				<!-- Cambiar "alt" para cada imagen -->		
 			<div class="item">
-				<div align="center"> <%=link_to( image_tag("hobbit-slide.jpg"), board_path) %></div>
+				<div align="center"> <%=link_to( image_tag("hobbit-slide.jpg", :size => '1100x400'), board_path,:class  => 'img-responsive') %></div>
 				<div class="carousel-caption">
 				</div>
 			</div>			
 			</div>
 
 			<div class="item">
-				<div align="center"> <%=link_to( image_tag("hierro-slide.jpg"), board_path) %></div>
+				<div align="center"> <%=link_to( image_tag("hierro-slide.jpg", :size => '1100x400'), board_path, :class  => 'img-responsive') %></div>
 				<div class="carousel-caption">
 				</div>
 			</div>
 
 			<div class="item">
-				<div align="center"> <%=link_to( image_tag("exodo-slide.jpg"), board_path) %></div>
+				<div align="center"> <%=link_to( image_tag("exodo-slide.jpg", :size => '1100x400'), board_path, :class  => 'img-responsive') %></div>
 				<div class="carousel-caption">
 				</div>
 			</div>
@@ -42,11 +42,26 @@
 			<span class="icon-next"></span>
 		</a>
   	</div>
-<div style="margin-bottom:5px"><%=link_to( image_tag("hobbit.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("exodo.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("el_francotirador.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("interstellar.jpg", size: "243x315"), board_path) %></div>
-<div style="margin-bottom:65px"><%=link_to( image_tag("hobbit.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("exodo.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("el_francotirador.jpg", size: "243x315"), board_path) %>
-<%=link_to( image_tag("interstellar.jpg", size: "243x315"), board_path) %></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 moviebar">
+        <div class="again180">Peliculas Destacadas</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" style="background-color:  rgba(0, 0, 0, 0.6);">
+      <%=	 image_tag(("hobbit.jpg"), :class => 'img-responsive') %>
+    </div>
+    <div class="col-sm-3" style="background-color:  rgba(0, 0, 0, 0.6);">
+      <%=	 image_tag(("exodo.jpg"), :class => 'img-responsive') %>
+    </div>
+    <div class="col-sm-3" style="background-color:  rgba(0, 0, 0, 0.6);">
+      <%=	 image_tag(("el_francotirador.jpg"), :class => 'img-responsive') %>
+    </div>
+    <div class="col-sm-3" style="background-color:  rgba(0, 0, 0, 0.6);">
+      <%=	 image_tag(("interstellar.jpg"), :class => 'img-responsive') %>
+    </div>
+  </div>
+
+</div>

@@ -1,7 +1,13 @@
-<div class="menu-services">
-  <div style="padding-top: 20px" align="center">
-   <%= link_to "Reservar en linea", {:controller => 'services/reservations', :action => 'new', :show => @show.id},{:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
-   <%= link_to "Comprar en linea", {:controller => 'services/purchases', :action => 'new', :show => @show.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
+<div class="container">
+  <div class="well well-sm" style="margin-top: 300px">
+      <div class="row">
+        <div class="col-sm-6 boton-rigth">
+                  <%= link_to "Reservar en linea", {:controller => 'services/reservations', :action => 'new', :show => @show.id},{:style=>'color:#FFFFFF;',  :class => "btn btn-primary"} %>
+        </div>
+        <div class="col-sm-6">
+            <%= link_to "Comprar en linea", {:controller => 'services/purchases', :action => 'new', :show => @show.id}, {:style=>'color:#FFFFFF;', :class => "btn btn-primary"} %>
+        </div>
+      </div>
   </div>
 </div>
 
