@@ -9,14 +9,18 @@
       <div class="col-sm-offset-1 col-sm-5">
         <%= form_for @payment, url: payments_create_path do |p| %>
 
+
+
             <div class="form-group">
                 <div><%= p.label "Introduzca Numero de Tarjeta" %></div>
-                <%= p.number_field :cardnumber, :class => 'form-control' %>
+                <%= p.number_field :cardnumber, :numericality => { :only_integer => true }, :class => 'form-control' %>
             </div>
 
             <div class="form-group">
                 <div><%= p.label "Fecha de Expiración"  %></div>
                 <%= p.date_field :due_date, :class => 'form-control'  %>
+                <%= p.date_select(:due_date, start_year: 1995, end_year: 2030, discard_day: true,:class => 'form-control' ) %><br><br>
+
             </div>
 
             <div class="form-group">

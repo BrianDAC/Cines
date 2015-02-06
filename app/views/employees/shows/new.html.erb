@@ -16,8 +16,8 @@
 				<td><%= show.room.number %></td>
 				<td><%= @seats.where(:show_id => show.id, :status => 0).count %></td>
 				<td><%= show.pelicula.tite %></td>
-				<td><%= link_to "Editar show", edit_employees_show_path(show) %></td>
-                <td><%= link_to "Destroy", employees_show_path(show), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<td><%= link_to "Editar", edit_employees_show_path(show) %></td>
+                <td><%= link_to "Eliminar", employees_show_path(show), method: :delete, data: { confirm: '¿Está Seguro?' } %></td>
 			</tr>
 		<% end %>
 	</tbody>
@@ -26,17 +26,18 @@
 <h3>Agregar Funcion</h3>
 <%=form_for @show, url: employees_shows_create_path do |s| %>
 <div class="field">
-    <%= s.label :schedule %>
-    <%= s.collection_select(:schedule_id, Schedule.all, :id, :hour, prompt: "Seleccione Hora") %>
+    <%= s.label :Hora %><br>
+    <%= s.collection_select(:schedule_id, Schedule.all, :id, :hour, prompt: "Seleccione Hora") %><br><br>
 </div>
 <div class="field">
-    <%= s.label :room %>
-    <%= s.collection_select(:room_id, Room.all, :id, :number, prompt: "Seleccione Sala") %>
+    <%= s.label :Sala%><br>
+    <%= s.collection_select(:room_id, Room.all, :id, :number, prompt: "Seleccione Sala") %><br><br>
 </div>
 <div class="field">
-    <%= s.label :pelicula %>
-    <%= s.collection_select(:pelicula_id, Pelicula.all, :id, :tite, prompt: "Seleccione Película") %>
+    <%= s.label :Pelicula %><br>
+    <%= s.collection_select(:pelicula_id, Pelicula.all, :id, :tite, prompt: "Seleccione Película") %><br><br>
 </div>
+<br>
 <%= s.submit %>
 <% end %>
 <br>
