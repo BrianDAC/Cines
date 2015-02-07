@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 moviebar">
+     <div class="again180"> Estadísticas </div>
+    </div>
+  </div>
+  <div class="wrapeador">
+
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-5">
+        <div><h3>Total de Boletos Vendidos en Hackmax: <h4 class="bg-info"><%= @total_boletos%></h4></h3></div>
+        <div><h3>Total Ventas Bs.: <h4 class="bg-info"><%= @total1  %></h4></h3></div>
+           
+      </div>
+        <% @bills.each do |bill| %>
+          <% puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"%>
+          <% puts bill %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<%= link_to "Regresar", :back %>
+</div>
+
+
+
+

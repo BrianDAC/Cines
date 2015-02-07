@@ -15,12 +15,19 @@ get "/details" => "billings#details"
   get "/cash" => "payments#cash"
   get "employees/ticket" => "employees#ticket"
 
+
+get "/registerlogin" => "users#registerlogin"
+get "message" => "users#messageregister"
+get "statistics" => "statistics#index"
+
+
   post '/admin/peliculas/create'
   post '/admin/price/create'
   post 'employees/shows/create'
   post '/admin/schedules/create'
   post '/services/reservations/create'
   post '/services/purchases/create'
+  post '/users/registers/create'
   post '/payments/create'
 
   namespace :admin do
@@ -33,6 +40,14 @@ get "/details" => "billings#details"
   namespace :services do
         resources :reservations, :purchases
   end
+
+  namespace :users do
+        resources :registers
+  end
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

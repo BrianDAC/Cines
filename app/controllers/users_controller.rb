@@ -10,4 +10,5 @@ class UsersController < ApplicationController
   def movie
     @show = Show.where(:pelicula_id => params[:id]).first
   end
+
 end

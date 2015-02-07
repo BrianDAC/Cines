@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203173414) do
+ActiveRecord::Schema.define(version: 20150207024446) do
 
   create_table "billings", force: true do |t|
     t.integer  "reservation_id"
@@ -126,5 +126,18 @@ ActiveRecord::Schema.define(version: 20150203173414) do
   add_index "showseats", ["reservation_id"], name: "index_showseats_on_reservation_id"
   add_index "showseats", ["seat_id"], name: "index_showseats_on_seat_id"
   add_index "showseats", ["show_id"], name: "index_showseats_on_show_id"
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "cel"
+    t.string   "ci"
+    t.date     "dateregister"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

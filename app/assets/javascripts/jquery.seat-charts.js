@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     var sala123 = document.getElementById("sala123");
     var seatid = [];
     var asientoselegidos = [];
